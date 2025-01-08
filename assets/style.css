@@ -1,0 +1,57 @@
+/* CSS RESETS */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/new-year-background-736885_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* Story Section Styles */
+.story-container {
+    text-align: center;
+    padding: 50px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.story-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.story-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.story-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.tagline {
+    font-size: 1.5em;
+    font-style: italic;
+    margin-top: 20px;
+}
