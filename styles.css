@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+    background: pink;
     padding: 30px;
 }
 
