@@ -1,40 +1,122 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keerthi.B - Interaction Design</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> 
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>Keerthi.B</h1>
-            <h2>Interaction Design Coursework 2025</h2>
-        </div>
-        <div class="grid">
-            <div class="card" style="--color:#FF9800;">
-                <h3>Hello World</h3>
-                <p>Introduction to HTML & CSS.</p>
-                <a href="./hello world/index.html" class="btn">View</a>
-            </div>
-            <div class="card" style="--color:#03A9F4;">
-                <h3>Assignment One</h3>
-                <p>Fundamentals of Web Design.</p>
-                <a href="./Assignment one/index.html" class="btn">View</a>
-            </div>
-            <div class="card" style="--color:#4CAF50;">
-                <h3>Exercise 1</h3>
-                <p>CSS Positions Experiment.</p>
-                <a href="./Exercise 1/E1 CSS Positions/D6.E1 CSS Positions.html" class="btn">View</a>
-            </div>
-            <div class="card" style="--color:#9C27B0;">
-                <h3>Exercise 2</h3>
-                <p>CSS Selectors in Action.</p>
-                <a href="./Exercise 2/E2 CSS Selectors/D3.E1 CSS Selectors.html" class="btn">View</a>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1d1d1d, #3a3a3a);
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Header */
+.header {
+    margin-bottom: 30px;
+    color: white;
+}
+
+.header h1 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.header h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Card Styling */
+.card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Colored Bottom Overlay */
+.card::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    height: 30px;
+    background: var(--color);
+    transform: translateX(-50%);
+    border-radius: 0 0 15px 15px;
+}
+
+/* Card Content */
+.card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    background: var(--color);
+    color: white;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(1, minmax(250px, 1fr));
+    }
+}
