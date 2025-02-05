@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    
+    <meta name="author" content="Expanded Metrics">
+    <meta name="description" content="">
+    <meta property="og:title" content=""/>
+    <meta property="og:description" content=""/>
+    
+    <title>D6.E1&thinsp;·&thinsp;CSS Positions</title>
+    
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website"/>
+
+    <link href="assets/defaults+font-face.css" rel="stylesheet" type="text/css">
+    <link href="CSS_TO_EDIT.css" rel="stylesheet" type="text/css">
+
+    <script src="assets/script.js" type="text/javascript" defer></script> 
+
+
+</head>
+    
+<body onload="loadPopupState()">
+
+    <h1>CSS Positions</h1>
+    
+    <br><br>
+    
+    <aside><h2>NOTE ON MARKUP & DEFAULT STYLING:</h2>
+        <ul>
+            <li>All sections have coloured divs within them.</li>
+            <li>All divs have a margin of 10px applied all around.</li>
+            <li>The base font size on the whole doc is 18px.</li>
+        </ul>
+    </aside>
+    <br><br>
+    
+    <!-- Section 1 ------------------------------------------------------------------------ -->
+    <section id="s1"> 
+        <h2>SECTION 1</h2>
+        <em>The Display Property.</em>
+        
+        <div>1st div in section 1 (display: inline)
+            <span>Websites are places.</span>
+            <span>Websites are places.</span>            
+            <span>They provide services and social environments and another.</span>
+            <span>Like architecture, they distribute access and atmospheric context to these resources.</span>
+            <span>Watching a video on Nowness is different from watching a video on YouTube.</span>
+        </div>
+    
+        <div>2nd div in section 1 (display: inline-block)
+            <span>Websites are places.</span>
+            <span>Websites are places.</span>            
+            <span>They provide services and social environments and another.</span>
+            <span>Like architecture, they distribute access and atmospheric context to these resources.</span>
+            <span>Watching a video on Nowness is different from watching a video on YouTube.</span>
+        </div>
+
+        <div>3rd div in section 1 (display: block)
+            <span>Websites are places.</span>
+            <span>Websites are places.</span>            
+            <span>They provide services and social environments and another.</span>
+            <span>Like architecture, they distribute access and atmospheric context to these resources.</span>
+            <span>Watching a video on Nowness is different from watching a video on YouTube.</span>
+        </div>
+
+        <div>4th div in section 1 (display: block + text-align: center)
+            <span>Websites are places.</span>
+            <span>Websites are places.</span>            
+            <span>They provide services and social environments and another.</span>
+            <span>Like architecture, they distribute access and atmospheric context to these resources.</span>
+            <span>Watching a video on Nowness is different from watching a video on YouTube.</span>
+        </div>
+    
+    </section>
+
+    <!-- Section 2 ------------------------------------------------------------------------ -->
+    <section id="s2"> 
+        <h2>SECTION 2</h2>
+        <em>CSS Units (All divs are set to inline-block)</em>
+        
+        <div>1st div (has no width set)
+            <span>Websites are local, despite their distributed nature. Websites adhere to culturally established patterns, languages and user expectations in similar ways architecture does. Buying an onigiri from a 7-11 branch is different from buying a pretzel from a Bavarian bakery.</span>
+        </div>
+
+        <div>2nd div (set to 600px wide)
+            <span>Websites are local, despite their distributed nature. Websites adhere to culturally established patterns, languages and user expectations in similar ways architecture does. Buying an onigiri from a 7-11 branch is different from buying a pretzel from a Bavarian bakery.</span>
+        </div>
+
+        <div>3rd div (set to 600px wide + has a a display: block and margin: auto)
+            <span>Websites are local, despite their distributed nature. Websites adhere to culturally established patterns, languages and user expectations in similar ways architecture does. Buying an onigiri from a 7-11 branch is different from buying a pretzel from a Bavarian bakery.</span>
+        </div>
+
+        <div>4th div (set to 100% width)
+            <span>Websites are local, despite their distributed nature. Websites adhere to culturally established patterns, languages and user expectations in similar ways architecture does. Buying an onigiri from a 7-11 branch is different from buying a pretzel from a Bavarian bakery.</span>
+        </div>
+        <div>5th div (set to 100vw)
+            <span>Websites are local, despite their distributed nature. Websites adhere to culturally established patterns, languages and user expectations in similar ways architecture does. Buying an onigiri from a 7-11 branch is different from buying a pretzel from a Bavarian bakery.</span>
+        </div>
+        <div>6th div (is set to 47% width)
+            <span>(This span is set to display: block and has a width of 50%.) Websites are cultural artifacts. Like buildings, websites foster social discourses. They do so by establishing new ways of interaction or by asking new aesthetic questions.
+            </span>
+        </div>
+        <div>7th div (set to 47% width)
+            <span>(This span is set to display: block and has a width of 50vw.) Websites are cultural artifacts. Like buildings, websites foster social discourses. They do so by establishing new ways of interaction or by asking new aesthetic questions.
+            </span>
+        </div>       
+        <div>8th div (set to 47% width + overflow: hidden)
+            <span>(This span is set to display: block and has a width of 50vw.) Websites are cultural artifacts. Like buildings, websites foster social discourses. They do so by establishing new ways of interaction or by asking new aesthetic questions.
+            </span>
+        </div>           
+        <div>9th div (set to 47% width + overflow: auto)
+            <span>(This span is set to display: block and has a width of 50vw.) Websites are cultural artifacts. Like buildings, websites foster social discourses. They do so by establishing new ways of interaction or by asking new aesthetic questions.
+            </span>
+        </div>        
+    </section>
+        
+    <!-- Section 3 ------------------------------------------------------------------------ -->
+    <section id="s3"> 
+        <h2>SECTION 3</h2>
+        <em>CSS Units — This section has a font-size of 24px applied to it</em>
+
+        <div>(This div has no font-size set)
+            Websites age. As buildings, some get better with age. Some decay. Others get renovated or re-purposed.
+        </div>
+
+        <div>(This div has a font-size of 15px)
+            Websites age. As buildings, some get better with age. Some decay. Others get renovated or re-purposed.
+        </div>
+        <div>(This div has a font-size of 1.5vw)
+            Websites age. As buildings, some get better with age. Some decay. Others get renovated or re-purposed.
+        </div>
+        <div>(This div has a font-size of 1em)
+            Websites age. As buildings, some get better with age. Some decay. Others get renovated or re-purposed.
+        </div>
+        <div>(This div has a font-size of 1rem)
+            Websites age. As buildings, some get better with age. Some decay. Others get renovated or re-purposed.
+        </div>
+
+    </section>
+        
+    <!-- Section 4 ------------------------------------------------------------------------ -->
+    <section id="s4"> 
+        <h2>SECTION 4</h2>
+        <em>The Position Property.</em>
+        
+        <div>
+            <h3>The Death of the Hipster</h3>
+                (1st div in section 4)
+            <p>
+                A terrible irony ultimately befell the Hipster: as Hipsterism branded authenticity into a system of visual language, it became scalable, infinitely replicable. It had to be able to accommodate mass-production supply chains, but still appear to do the opposite. In order for products to lose their commodity-signifiers, they had to distinguish themselves from consumer capitalism’s automated presets — things like the form of the factory default or the Adobe template. This distancing required more and more layers of design treatment, and more systematization of this design treatment to facilitate further scalability.
+            </p>
+                The resulting set of authenticity-signifiers proved to make great brand assets, particularly useful to elevate cheap, fast, casual products and services to a slightly fancier level with a small price markup, producing things it makes sense (to echo Shorin)11 in calling “Premium Mediocre”. This phenomenon confirms the fascinating class element of authenticity-politics: that not only is authenticity something to be bought and sold, but it’s only really accessible to the wealthy, and those in the lower-middle-class striving toward success can have a taste of it in their slightly-more-expensive McDonald’s chicken sandwich that’s been photographed on raw-wood in natural lighting instead of some garish red-and-yellow backdrop, and has the words “natural,” “signature”, “craft”, or “artisan” somewhere in its name.
+            <p>
+                As authenticity scaled into the Premium Mediocre (thanks to graphic designers’ branding skills in service of marketing firms) and lost its exclusivity, we started to associate labels like “signature” and “craft” more with fast food than some platonic vision of the raw, whole, ancient wilderness of the real world. Everything started looking more and more like a Williamsburg coffee shop, McDonalds like Whole Foods, its ads like Kinfolk Magazine. But we’re smart enough to know that “dijon” is always just going to be the same mustard but in a pricier, neutral-toned packet — and to pay that markup is to pay for different design, not a better product. The eternal form-versus-content debate continues to plague authenticity-seeking graphic designers everywhere: is “form” just as valuable as “content” when the “form” is a mustard packet and the “content” is the mustard? Michael Rock can write as many manifestos as he wants from the security of his office at 2x4 where it’s easy to see design in a vacuum, but it won’t stop graphic design’s dismissal as it’s increasingly recognized as a passive tool in the belt of profit-hungry corporations.
+            </p>
+            <p> 
+                Authenticity-at-scale is something entirely different from the version the Hipster fetishized, following Moore’s Law: as something grows cheaper, faster, and smaller, the nature of the thing changes. When the value of the thing derives from scarcity itself, democratization kills its credibility. This democratization of authenticity was the final nail in the Hipster’s coffin: solid, material proof that any pursuit of authenticity is foolish, because authenticity itself is fake, in the sense that any other marketing gimmick is perceivably “fake” — therefore rendering it useless as a tool to sell scarcity. Scarcity and originality are not only unattainable, but valueless. Shorin writes, “Authenticity has expanded to the point that people don’t even believe in it anymore.” The death of authenticity meant that people had to move on to a new measurement of realness to believe in.
+            </p>
+        </div>
+
+        <div>
+            <h3>3.2 Normcore as Brand Strategy</h3>
+            (2nd div in the fourth section)
+            <p>A truly post-authentic sincere attitude is synonymous with “normcore,” as originally defined in K-HOLE’s trend report Youth Mode, a timely and groundbreaking publication released in 2013 as the last embers of Hipsterism were fading.To crudely summarize highlights of the analysis: The opposite of mass authenticity-seeking, which they name “Mass Indie,” is the normcore attitude. The normcore derives value from popularity and recognition, not scarcity. The pursuit of uniqueness is devalued; dynamicism and flexibility are more important than originality, because originality itself is unattainable. One of the first declarations in the publication is “Normcore is about adaptability, not exclusivity.” Adaptability is the key characteristic of the normcore attitude, the true post-authentic attitude.</p>
+            <p>After K-HOLE coined the term, “normcore” was incorrectly interpreted and memeified as simply a bland, minimal aesthetic. But really it’s not an aesthetic in itself, rather a “strategy to blend into any context.”15 To blend in doesn’t mean simply to be bland, it means accepting rather than resisting the form of the mainstream, whatever that looks like. The mundanity of truly normcore aesthetics is often mistaken for neo-modernist minimalism because they seek to blend in, rather than distinguish from, the expected form of the given structure. This does seem oddly Modernist, except rather than attaching claims of moral superiority inherent in its materiality, normcore design treats its form as simply a product of social or material conditions. It embraces these conditions because they exist, not because they’re good. Goodness (virtue) comes from this honesty. Any formal blandness in products, then, comes from embracing the genericness of the commodity form. Instead of romanticizing the “nature” outside, the normcore, post-authentic attitude romanticizes the nature of consumer culture’s interior, the space of capital exchange, because that’s the new, generally accepted, normal.</p>
+            <p>It’s easy to see how a normcore approach to this new normal (a now-overt complicity in capitalist realism) has triggered a shift in what realness looks like in the world of marketing. The role of the designer looks pretty different — if not bleak — in the post-authentic era, where design itself is seen more and more as frivolous decoration, or worse, a simple tool for deception. The authenticity fetish did more harm than good for the graphic designer’s reputation, as the group easiest to blame for aestheticizing Hipster authenticity into deceptive brand assets and thereby making a farce of its gesture at ethical value. Premium Mediocre pandering and pretension now feels so cringey and patronizing that buying products dressed-up as superior non-commodities means that either you have enough excess cash not to care about being ripped-off, or you are a hopelessly idealistic Mass Indie Millennial clinging onto an outdated moral framework. You could argue that this is just the typical pendulum-swing of aesthetic trends, which is likely true, but I see it also as part of a bigger paradigm shift: Consumers now have less of an inherent distrust toward brands and commodification, and more of a skepticism toward design itself. Brands can be okay, even trustworthy, as long as they signal a neoliberal transparency, but this transparency requires a serious humbling of design.</p>
+            <p>Any attempt to transcend capitalism’s automated presets means simply painting over them, in a deceptive act of concealing. Since there’s no denying the omnipresence of the commodity, there’s no point in trying to cover it up. Each layer of design that aims to camouflage the commodity form adds a layer of opacity. Design itself, then, seems insincere. The apparent stripping-away of it enables the refreshing aura of transparency, the texture of post-authentic sincerity. Of course, this doesn’t mean that companies are firing all of their designers, but it does mean that they must adapt their work to match the new reality, do their part in branding the capitalist-real.</p>
+
+
+        </div>
+    </section>
+
+    <!-- Section 5 ------------------------------------------------------------------------ -->
+    <section id="s5"> 
+        <h2>SECTION 5</h2>
+        <em>The Position Property, contd.</em>
+
+        <div>1st div in Section 5. (Position: static)</div>
+        <div>2nd div in Section 5. (Position: relative)</div>
+        <div>3rd div in Section 5.(Position: absolute; top: 15px; right: 20px;)</div>            
+        <div>4th div in Section 5.(Position: static)</div>      
+        <div>5th div in Section 5.(Position: static)</div>    
+            
+    </section>
+
+    <!-- Section 6 ------------------------------------------------------------------------ -->
+    <section id="s6"> 
+        <h2>SECTION 6</h2>
+        <em>The Position Property, contd. (this section has a position: relative set to it)</em>
+
+        <div>1st div in Section 6. (Position: static)</div>
+        <div>2nd div in Section 6. (Position: absolute; bottom: 10px; right: 0;)</div>
+        <div>3rd div in Section 6.(Position: absolute; left: -40px;)</div>            
+        <div>4th div in Section 6.(Position: static)</div>      
+        <div>5th div in Section 6.(Position: static)</div>    
+            
+    </section>
+
+    <!-- Section 7 ------------------------------------------------------------------------ -->
+    <section id="s7"> 
+        <h2>SECTION 7</h2>
+
+        <div>
+            SEIZE THE DEFAULTS! (first div in section 7)
+        </div>
+        <div>
+            SEIZE THE DEFAULTS! (second div in section 7)
+        </div>        
+        <div>
+            BE THE PROGRAMMER THAT YOU ALREADY ARE!  (third div in section 7)
+        </div>
+    </section>
+    
+
+
+    
+    
+    
+    <!-- POPUP ------------------------------------------------------------------------ -->
+    <button id="openPopup" onclick="showPopup()">?</button>
+    <div id="popupCover" onclick="hidePopup()"></div>
+
+    <div id="popup">
+        
+        <p>For this exercise, edit the file named "CSS_TO_EDIT.css" (in the same root folder as this HTML file) and make the changes mentioned below. 
+        <br><br>
+        Do not edit the markup or add classnames in the HTML file!
+        <br><br>
+
+        There are seven sections in this HTML document, tagged with IDs #s1 to #s7. In each section there's a set of coloured div elements. Follow the section-wise instructions for positioning and laying them out:
+        <br><br>    
+
+        <hr>
+        <p><u>Section 1:</u>
+        <ol>
+            <li>All span elements in this section need a background color of yellow, and the property mix-blend-mode: difference;
+            </li>            
+            <li>All spans in this section need a 2px margin underneath, and a height of 30px.</li>
+            <li>The first div's span needs to be set as a display: inline, the second as inline-block, and the third and fourth as display: block.</li>
+            <li>On the 4th div's span, remove the declared height (height: auto;), and align text to the center.</li>
+        </ol>
+        </p>
+        <br>
+
+        <hr>
+        <p><u>Section 2:</u><br>
+            <ol>
+                <li>All div elements in this section need to be set as inline-block.</li>      
+                <li>Set the 2nd div element's width to 600px.</li>        
+                <li>Do the same for the 3rd div, but also add a display: block; and a margin: auto; declaration to just this one.</li>     
+                <li>The 4th div needs a width of 100%.</li>    
+                <li>The 5th div needs a width of 100vw.</li>   
+                <li>The 6th, 7th, 8th and 9th divs all needs a width of 47% each.</li>    
+                <li>Nested spans within a div in this section all need a background colour, and a mix-blend mode: difference; (note: already added). Add a display: block; declaration as well for these span elements.</li> 
+                <li>The nested span within the 6th div needs a width of 50%; while the nested span in the 7th, 8th, and 9th divs all need a width of 50vw.</li> 
+                <li>On just the 8th and 9th divs in this section, add an overflow: hidden; and an overflow: auto, respectively.</li>    
+                <li>
+                (At this point you're probably going to see some horizontal scrolling come up on account of the overflow from this section, so open up the ‘defaults+font-face.css’ styling (under ‘assets’), and set the 'overflow-x' property to 'hidden' on the body element.) </li>
+            </ol>            
+
+        </p>
+        <br>
+    
+        <hr>
+        <p><u>Section 3:</u><br>
+            <ol>
+                <li>Set a font-size of 24px on the whole section.</li>
+                <li>Now, set a font-size of 15px on the second div,</li>
+                <li>a font-size of 1.5vw on the third div,</li>
+                <li>a font-size of 1em on the fourth div,</li>
+                <li>and a font-size of 1rem on the fifth div.</li>
+            </ol>
+
+        </p>
+        <br>
+
+        <hr>
+
+        <p><u>Section 4:</u><br>
+            <ol>
+                <li>In section 4, the divs need to be at 50% width, with a margin: auto declaration added.</li>
+                <li>On the second div, set the margin-right to zero.</li>
+                <li>To the h3 tags in this section need a position: sticky; with a top value of 1rem.</li>
+                <li>The h3 in the second div can have a top value of 0, and a background-color added as well.</li>
+            </ol>
+        </p>
+        <br>
+        <hr>       
+
+        <p><u>Section 5:</u><br>
+            <ol>
+                <li>Make the divs in this section 22% wide. Set a position: static on all of them.</li>
+                <li>Give the second div a relative position. Set right value to 20px, and bottom value to 20px. Also give this div a mix-blend-mode of 'multiply'.</li>
+                <li>Give the third div an absolute position, with right: 20px, and top 10px.</li>
+            </ol>
+        </p>
+        <br>
+        <hr>           
+
+        <p><u>Section 6:</u><br>
+            <ol>
+                <li>The section itself needs a relative position set on it.</li>
+                <li>All divs to be 50% wide.</li>
+                <li>Now, set absolute positioning on the second div, with a right value of 0, and a bottom value of 10px. Set a 20% width on just this one.</li>
+                <li>Set absolute positioning on the third div as well, but with a left value of -40px, and a mix-blend-mode set to difference.</li>
+            </ol>
+        </p>
+        <br>
+        <hr>           
+        
+        <p><u>Section 7:</u><br>
+            <ol>
+                <li>In the last section, just give the 2nd div a fixed position, with a top: 0; and left: 0. Also set the margins to 0.</li>
+            </ol>
+
+        </p>
+
+    </div>
+
+</body>    

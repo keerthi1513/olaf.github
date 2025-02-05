@@ -1,0 +1,224 @@
+/* BODY AND SECTIONS */
+/* ----------------------------------------------------- */
+/* All body and section styling available here (except for the fonts, which are declared in the defaults+fonts.css). Some properties have already been declared */
+
+body {
+    padding: 40px 10%;
+    background-color: rgb(235, 235, 235) ;  
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+section > h2 {
+    text-align: center;
+    line-height: 1;
+    border-bottom: 1px solid black;
+    padding-bottom: 8px;
+}
+
+section > em {
+    display: block;
+    margin: 8px 0;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+section > div {
+    margin: 10px;
+}
+
+#s1 > div {background-color: #FFFF00;}
+#s2 > div {background-color: #CDEAC0;}
+#s3 > div {background-color: #FFFAE3;}
+#s4 > div {background-color: #FF5964;}
+#s5 > div {background-color: #B8F3FF;}
+#s6 > div {background-color: #B298DC;}
+#s7 > div {background-color: #BDC696;}
+
+
+/* Section 1 */
+section:nth-of-type(1) span {
+    background-color: yellow;
+    mix-blend-mode: difference;
+    margin-bottom: 2px;
+    height: 30px;
+}
+
+section:nth-of-type(1) div:nth-of-type(1) span {
+    display: inline;
+}
+
+section:nth-of-type(1) div:nth-of-type(2) span {
+    display: inline-block;
+}
+
+section:nth-of-type(1) div:nth-of-type(3) span,
+section:nth-of-type(1) div:nth-of-type(4) span {
+    display: block;
+}
+
+section:nth-of-type(1) div:nth-of-type(4) span {
+    height: auto;
+    text-align: center;
+}
+
+/* Section 2 */
+section:nth-of-type(2) div {
+    display: inline-block;
+}
+
+section:nth-of-type(2) div:nth-of-type(2),
+section:nth-of-type(2) div:nth-of-type(3) {
+    width: 600px;
+}
+
+section:nth-of-type(2) div:nth-of-type(3) {
+    display: block;
+    margin: auto;
+}
+
+section:nth-of-type(2) div:nth-of-type(4) {
+    width: 100%;
+}
+
+section:nth-of-type(2) div:nth-of-type(5) {
+    width: 100vw;
+}
+
+section:nth-of-type(2) div:nth-of-type(6),
+section:nth-of-type(2) div:nth-of-type(7),
+section:nth-of-type(2) div:nth-of-type(8),
+section:nth-of-type(2) div:nth-of-type(9) {
+    width: 47%;
+}
+
+section:nth-of-type(2) div span {
+    background-color: yellow;
+    mix-blend-mode: difference;
+    display: block;
+}
+
+section:nth-of-type(2) div:nth-of-type(6) span {
+    width: 50%;
+}
+
+section:nth-of-type(2) div:nth-of-type(7) span,
+section:nth-of-type(2) div:nth-of-type(8) span,
+section:nth-of-type(2) div:nth-of-type(9) span {
+    width: 50vw;
+}
+
+section:nth-of-type(2) div:nth-of-type(8) {
+    overflow: hidden;
+}
+
+section:nth-of-type(2) div:nth-of-type(9) {
+    overflow: auto;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Section 3 */
+section:nth-of-type(3) {
+    font-size: 24px;
+}
+
+section:nth-of-type(3) div:nth-of-type(2) {
+    font-size: 15px;
+}
+
+section:nth-of-type(3) div:nth-of-type(3) {
+    font-size: 1.5vw;
+}
+
+section:nth-of-type(3) div:nth-of-type(4) {
+    font-size: 1em;
+}
+
+section:nth-of-type(3) div:nth-of-type(5) {
+    font-size: 1rem;
+}
+
+/* Section 4 */
+section:nth-of-type(4) div {
+    width: 50%;
+    margin: auto;
+}
+
+section:nth-of-type(4) div:nth-of-type(1) {
+    margin-left: 0;
+
+}
+
+section:nth-of-type(4) h3 {
+    position: sticky;
+    top: 1rem;
+    background-color: aqua;
+    height: 50px;
+    text-align: center ;
+}
+
+section:nth-of-type(4) div:nth-of-type(2) h3 {
+    top: 0;
+    background-color: yellow;
+}
+
+/* Section 5 */
+section:nth-of-type(5) div {
+    width: 22%;
+    position: static;
+}
+
+section:nth-of-type(5) div:nth-of-type(2) {
+    position: relative;
+    margin-top: 40px;
+    right: 20px;
+    bottom: 20px;
+    mix-blend-mode: multiply;
+}
+
+section:nth-of-type(5) div:nth-of-type(3) {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+/* Section 6 */
+section:nth-of-type(6) {
+    position: relative;
+}
+
+section:nth-of-type(6) div {
+    width: 50%;
+}
+
+section:nth-of-type(6) div:nth-of-type(2) {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    width: 20%;
+}
+
+section:nth-of-type(6) div:nth-of-type(3) {
+    position: absolute;
+    left: -40px;
+    mix-blend-mode: difference;
+}
+
+/* Section 7 */
+section:nth-of-type(7) div:nth-of-type(2) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+

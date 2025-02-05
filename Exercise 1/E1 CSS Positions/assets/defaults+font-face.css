@@ -1,0 +1,172 @@
+/* FONTS */
+/* ----------------------------------------------------- */
+
+@font-face  {
+    font-family: 'Cotham Sans';
+    src: url('CothamSans.eot');
+    src: url('CothamSans.eot?#iefix') format('embedded-opentype'),
+         url('CothamSans.woff2') format('woff2'),
+         url('CothamSans.woff') format('woff'),
+         url('CothamSans.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Director';
+    src:    url('Director-Regular.eot');
+    src:    url('Director-Regular.eot?#iefix') format('embedded-opentype'),
+            url('Director-Regular.woff') format('woff'),
+            url('Director-Regular.woff2') format('woff2'),
+            url('Director-Regular.ttf') format('truetype'),
+            url('Director-Regular.svg#svgFontName') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM Mono';
+    src:    url('DMMono-Regular.eot');
+    src:    url('DMMono-Regular.eot?#iefix') format('embedded-opentype'),
+            url('DMMono-Regular.woff') format('woff'),
+            url('DMMono-Regular.woff2') format('woff2'),
+            url('DMMono-Regular.ttf') format('truetype'),
+            url('DMMono-Regular.svg#svgFontName') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* CSS RESETS */
+/* ----------------------------------------------------- */
+
+*   {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html    {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body    {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+img {
+    display: block; 
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+h1,h2,h3,h4 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+
+/* FONTS ONLY */
+/* ----------------------------------------------------- */
+
+html {
+    font-family: 'Director', monospace;
+    letter-spacing: -0.1rem;
+    font-size: 20px;
+}
+
+h1 {
+    font-family: 'DM Mono', sans-serif;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Director', monospace;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+body > aside {
+    font-size: 0.8em;
+}
+body > aside > h2 {
+    text-align: left;
+}
+
+
+/* POPUP STYLING */
+/* ----------------------------------------------------- */
+
+#openPopup {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  width: 30px;
+  height: 30px;
+  outline: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: salmon;
+  cursor: pointer;
+}
+
+#popupCover {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: 80%;
+  background-color: lightgray;
+  z-index: 10;
+}
+
+#popup {
+  font-family: 'Cotham Sans', sans-serif;
+  font-size: 0.9rem;
+  width: 400px;
+  min-width: 250px;
+  max-width: 100vw;;
+  position: fixed;
+  height: calc(100vh - 50px);
+  overflow-y: auto;
+  top: 25px;
+  right: 25px;
+  border: 1px solid black;
+  padding: 30px;
+  background-color: white;
+  z-index: 20;
+  letter-spacing: 0;
+}
+
+#popup > ol {
+  margin-left: 1rem;
+  padding-left: 1em;
+}
+#popup > ol li {
+  margin-bottom: 10px;
+}
+
+#popup > ul {
+  margin-left: 0;
+  padding-left: 1em;
+}
+
+
+::selection {
+    background-color: black;
+    color: white;
+}
+::-moz-selection {
+    background-color: black;
+    color: white;
+}
