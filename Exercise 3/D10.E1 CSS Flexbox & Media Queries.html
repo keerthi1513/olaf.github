@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    
+    <meta name="author" content="Expanded Metrics">
+    <meta name="description" content="">
+    <meta property="og:title" content=""/>
+    <meta property="og:description" content=""/>
+    
+    <title>D10.E1&thinsp;·&thinsp;CSS Flexbox & Media Queries</title>
+    
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website"/>
+
+    <link href="assets/defaults+font-face.css" rel="stylesheet" type="text/css">
+    <link href="CSS_TO_EDIT.css" rel="stylesheet" type="text/css">
+
+    <script src="assets/script.js" type="text/javascript" defer></script> 
+
+
+</head>
+    
+<body onload="loadPopupState()">
+
+    
+    <section id="s1">
+
+        <aside>
+            <h2>SECTION 1 (#s1)</h2>
+            <p>Flex-Direction, Justify-Content, and Align-Items</p>
+            <br><u>Note:</u> The justify-content property controls the distribution of all items along the primary flex axis (as set via flex-direction), while the align-items property contols alignment along the cross axes of the items.
+        </aside>
+
+        <article>
+            <div class="left">
+                <h3>← Flex-Direction: Row →</h3>
+                <!-- h3 has position: absolute set on it; and is taken out of the document flow -->      
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+                <div>Item 4</div>
+                <div>Item 5</div>
+            </div>
+
+            <div class="right">
+                <h3>↑ Flex-Direction: Column ↓</h3>
+                <!-- h3 has position: absolute set on it; and is taken out of the document flow -->   
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+                <div>Item 4</div>
+                <div>Item 5</div>                
+            </div>
+
+        </article>
+
+        <aside>
+            <fieldset>
+                <p>Justify-Content:</p>
+                <div>
+                  <input type="radio" id="jcflex-start" name="jc" value="" checked/>
+                  <label for="jcflex-start">flex-start</label>
+                </div>
+              
+                <div>
+                  <input type="radio" id="jcflex-end" name="jc" value="" />
+                  <label for="jcflex-end">flex-end</label>
+                </div>
+                <div>
+                  <input type="radio" id="jccenter" name="jc" value="" />
+                  <label for="jccenter">center</label>
+                </div>
+                <div>
+                    <input type="radio" id="jcspace-between" name="jc" value="" />
+                    <label for="jcspace-between">space-between</label>
+                </div>     
+                <div>
+                    <input type="radio" id="jcspace-around" name="jc" value="" />
+                    <label for="jcspace-around">space-around</label>
+                </div>  
+                <div>
+                    <input type="radio" id="jcspace-evenly" name="jc" value="" />
+                    <label for="jcspace-evenly">space-evenly</label>
+                </div>       
+                                  
+            </fieldset>
+
+            <fieldset>
+                <p>Align-Items:</p>
+                <div>
+                  <input type="radio" id="aiflex-start" name="ai" value="" />
+                  <label for="aiflex-start">flex-start</label>
+                </div>
+              
+                <div>
+                  <input type="radio" id="aiflex-end" name="ai" value="" />
+                  <label for="aiflex-end">flex-end</label>
+                </div>
+                <div>
+                  <input type="radio" id="aicenter" name="ai" value="" />
+                  <label for="aicenter">center</label>
+                </div>
+                <div>
+                    <input type="radio" id="aistretch" name="ai" value="" checked/>
+                    <label for="aistretch">stretch</label>
+                </div>     
+                <div>
+                    <input type="radio" id="aibaseline" name="ai" value="" />
+                    <label for="aibaseline">baseline</label>
+                </div>                    
+            </fieldset>              
+      
+        </aside>
+    </section>
+
+    <section id="s2">
+
+        <aside>
+            <h2>SECTION 2 (#s2)</h2>
+            <p>Flex-Wrap, and Align-Content</p>
+            <u>Note:</u> The align-content property only works with multiple lines (with flex-wrap set to wrap. or wrap-reverse) and is a way to control how the multiple lines stack upon each other.
+        </aside>
+
+        <article>
+            <div class="left">
+                <h3>← Flex-Direction: Row →</h3>
+                <!-- h3 has position: absolute set on it; and is taken out of the document flow -->   
+
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+                <div>Item 4</div>
+                <div>Item 5</div>
+                <div>Item 6</div>
+                <div>Item 7</div>
+                <div>Item 8</div>
+                <div>Item 9</div>
+                <div>Item 10</div>                
+            </div>
+
+            <div class="right">
+                <h3>↑ Flex-Direction: Column ↓</h3>
+                <!-- h3 has position: absolute set on it; and is taken out of the document flow -->   
+
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+                <div>Item 4</div>
+                <div>Item 5</div>
+                <div>Item 6</div>
+                <div>Item 7</div>
+                <div>Item 8</div>
+                <div>Item 9</div>
+                <div>Item 10</div>  
+                <div>Item 11</div>
+                <div>Item 12</div>
+                <div>Item 13</div>
+                <div>Item 14</div>
+                <div>Item 15</div>                                              
+            </div>
+
+        </article>
+
+        <aside>
+            <fieldset>
+                <p>Align-Content:</p>
+                <div>
+                  <input type="radio" id="acflex-start" name="ac" value="" />
+                  <label for="acflex-start">flex-start</label>
+                </div>
+              
+                <div>
+                  <input type="radio" id="acflex-end" name="ac" value="" />
+                  <label for="acflex-end">flex-end</label>
+                </div>
+                <div>
+                  <input type="radio" id="accenter" name="ac" value="" />
+                  <label for="accenter">center</label>
+                </div>
+                <div>
+                    <input type="radio" id="acspace-between" name="ac" value="" checked/>
+                    <label for="acspace-between">stretch</label>
+                </div>                 
+                <div>
+                    <input type="radio" id="acspace-between" name="ac" value="" />
+                    <label for="acspace-between">space-between</label>
+                </div>     
+                <div>
+                    <input type="radio" id="acspace-around" name="ac" value="" />
+                    <label for="acspace-around">space-around</label>
+                </div>  
+                <div>
+                    <input type="radio" id="acspace-evenly" name="ac" value="" />
+                    <label for="acspace-evenly">space-evenly</label>
+                </div>       
+                                   
+            </fieldset>
+
+
+        </aside>
+    </section>
+
+    <section id="s3">
+        <aside>
+            <h2>SECTION 3 (#s3)</h2>
+            <p>Flex-Basis, and Flex-Grow</p>
+            <u>Note:</u> The flex-basis property sets the width (or height) of an item before any subsequent flex calculation is applied to the flex layout, such as justify-content, flex-grow, or flex-shrink.<br>With flex-grow, any leftover space in the layout is divided up and then ‘assigned’ to each item according to the flex-grow value that it has (i.e. if all items have a flex-grow of 1, they all get 1/n number of leftover space, where n is the number of items. If any item has a flex-grow of, e.g. 2, they 2/n the amount of leftover space, and so on.)
+        </aside>
+
+        <article>
+            <div class="left">
+                <h3>← Flex-Direction: Row →</h3>
+                <!-- h3 has position: absolute set on it; and is taken out of the document flow -->   
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+            </div>
+
+            <div class="right">
+                <h3>↑ Flex-Direction: Column ↓</h3>
+                <!-- h3 has position: absolute set on it; and is taken out of the document flow -->   
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+            </div>
+                                 
+        </article>
+
+        <aside>
+            <fieldset>
+                <p>Flex-basis on Item 1</p>
+                <div>
+                  <input type="radio" id="fb1-0" name="fb1" value="" />
+                  <label for="fb1-0">auto</label>
+                </div>
+                <div>
+                  <input type="radio" id="fb1-50" name="fb1" value="" checked/>
+                  <label for="fb1-50">50%</label>
+                </div>
+            </fieldset>            
+            <fieldset>
+                <p>Flex-grow on Item 1</p>
+                <div>
+                  <input type="radio" id="fg1-0" name="fg1" value="" checked/>
+                  <label for="fg1-0">0</label>
+                </div>
+                <div>
+                  <input type="radio" id="fg1-1" name="fg1" value=""/>
+                  <label for="fg1-1">1</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <p>Flex-grow on Item 2</p>
+                <div>
+                  <input type="radio" id="fg2-0" name="fg2" value="" checked/>
+                  <label for="fg2-0">0</label>
+                </div>
+                <div>
+                  <input type="radio" id="fg2-1" name="fg2" value=""/>
+                  <label for="fg2-1">1</label>
+                </div>
+            </fieldset>         
+
+            <fieldset>
+                <p>Flex-grow on Item 3</p>
+                <div>
+                  <input type="radio" id="fg3-0" name="fg3" value="" checked/>
+                  <label for="fg3-0">0</label>
+                </div>
+                <div>
+                  <input type="radio" id="fg3-1" name="fg3" value=""/>
+                  <label for="fg3-1">1</label>
+                </div>
+            </fieldset>                   
+
+
+        </aside>
+    </section>
+
+    <section id="s4">
+        <aside>
+            <h2>SECTION 4 (#s4)</h2>
+            <p>Flex-Order, and Media Queries</p>
+
+        </aside>
+
+        <article>
+            <div class="left">
+                <h3>← Flex-Direction: Row →</h3>
+                <!-- h3 has position: absolute set on it; and is taken out of the document flow -->   
+
+                <div>1.<br>It is continuously illuminating to realize websites are just text files in folders, like any other writing you’d keep on your computer. And too that, beyond this, a webpage is whatever you want it to be.</div>
+                <div>2.<br>Today, most webpages look the same. They don’t have to. There is no reason for their look beyond convention, false assumptions, and probably a type of soul-tiredness prevalent today. Your webpage can, and should, look however you want. It can, and should, be about anything you want. It does not need to be perfect, or finished, or even good. A webpage, at best, is a space you manifest to hold an idea or dream. It is whatever that means for you.</div>
+            </div>
+            <div class="right">
+                <h3>↑ Flex-Direction: Column ↓</h3>
+                <!-- h3 has position: absolute set on it; and is taken out of the document flow -->   
+                <div>1.<br>You need two tools for making a website: a text editor and a browser. You will use other tools in the future–a server to broadcast your page and a domain name in which to find it–but these are topics for a future zine.</div>
+                <div>2.<br>The browser reads you quite literally and doesn’t pick up on subtle clues like linebreaks. It saw text and, to please you, displayed it as quickly and efficiently as it could. If you want your text to be structured, you have to be explicit with that structure, using a language the browser understands. Text of the future. Hypertext. I’m talking Hypertext Markup Language, baybee! Good ol’ HTML.</div>
+                <div>3.<br>By text editor, I mean a computer program that lets you fill a blank page as simply as possible. Ultimately, your text editor is a deeply personal choice, like picking your preferred pen or notebook. When you find the one right for you, it can be like discovering both a new way of speaking and a long-lost friend.</div>                
+            </div>   
+        </article>
+
+        <aside></aside>
+
+    </section>    
+
+
+    <!-- POPUP ------------------------------------------------------------------------ -->
+    <button id="openPopup" onclick="showPopup()">?</button>
+    <div id="popupCover" onclick="hidePopup()"></div>
+
+    <div id="popup">
+        
+        <h2>CSS Flexbox & Media Queries</h2>
+        <p>For this exercise, you'll have to edit both this HTML document and the CSS file named "CSS_TO_EDIT.css" (in the same root folder as this HTML file), making the changes mentioned below. 
+        <br><br>
+        First, take a look at the broad <a href="assets/dom_structure.txt" target="_blank">DOM structure for this document</a>.<br><br>
+        
+        There are four top-level &lt;section&gt; elements in this HTML document, tagged with IDs #s1 to #s4. In each section there's an &lt;aside&gt; then an &lt;article&gt;, and followed by an &lt;aside&gt; again.<br><br>
+        
+        Each &lt;article&gt; is again split into two &lt;div&gt; elements, each with a class name &lsquo;.left&rsquo;, and &lsquo;.right&rsquo;. These will be our <strong>flex containers</strong> for this exercise, and the nested &lt;div&gt; elements within the .left and .right divs are going to be the <strong>flex items</strong> that you're going to style.<br><br>
+ 
+        <hr>
+        <p><u>General styling</u>
+        <ol>
+            <li>Start by setting a display: flex; on all .left and .right divs. This will activate the Flexbox layout for these containers.
+            </li>            
+            <li>All right divs needs a flex-direction: column; applied.</li>
+            <li>Each flex item (the nested divs within the left and right divs) needs centrally-aligned text, a margin of 2px, and a padding of 5px.</li>
+            <li>Once you're done with the above, observe how the flex-items appear within all the sections.</li>
+        </ol>
+        </p>
+        <br>
+
+        <hr>
+        <p><u>Section 1 (#s1):</u>
+        <ol>
+            <li>In #s1, the fourth flex item needs a font-size of 2.2rem.
+            </li>            
+            <li>The fifth flex item needs a font-size of 1.5rem.</li>
+            <li>Now, go to the HTML markup. Within the second aside element in this section, there are two fieldsets containing radio buttons, one fieldset that toggles between all the justify-content property options for the flex containers, and one that toggles between all the align-items property options. Add the correct values to each radio input &lsquo;value&rsquo; attribute, to activate the radio buttons.</li>
+            <li>Once you're done with the above, observe the various justify-content and align-items properties, to see how it affects the flex-items within the flex-containers.</li>        
+            <li>Last, add a flex-grow: 1; to each flex-item, and observe how it changes the justify-content property.</li>                 
+        </ol>
+        </p>
+        <br>
+
+        <hr>
+        <p><u>Section 2 (#s2):</u><br>
+            <ol>
+                <li>The flex containers in this section (.left and .right divs) need a flex-wrap set to &lsquo;wrap&rsquo;.</li>  
+                <li>As in #s1, go to #s2's HTML markup and edit the fieldset in the second aside element. This time, add the correct values that toggle the options for the align-content property on the flex container. This will activate the radio buttons</li>            
+                <li>Once you're done with the above, observe the various align-content options to see how it affects the flex items.</li>        
+                <li>Try changing the flex-wrap to &lsquo;wrap-reverse&rsquo; and observe what happens.</li>        
+                <li>Also add a flex-basis: 90px; to each flex-item, and see how it affects the layout.</li>
+            </ol>            
+
+        </p>
+        <br>
+    
+        <hr>
+        <p><u>Section 3 (#s3):</u><br>
+            <ol>
+                <li>In this section, the first flex item in both .left and .right divs need a flex-basis of 50%.</li>
+                <li>Go to #s3's HTML markup and edit the fieldset in the second aside element. On the first radio (for flex-basis), add the values of &lsquo;auto&rsquo; and &lsquo;50%&rsquo; in each radio input. On the other radios (for flex-grow), add values of &lsquo;0&rsquo; and &lsquo;1&rsquo; to each radio option, to toggle flex-grow on and off in each flex-item.</li>
+                <li>Once the radio buttons are activated, observe the different flex-basis and flex-grow options to see it in action.</li> 
+            </ol>
+        </p>
+        <br>
+
+        <hr>
+
+        <p><u>Section 4 (#s4):</u><br>
+            <ol>
+                <li>In section 4, the flex containers (.left and .right divs) need flex-wrap set to wrap. Also give it a gap of 0.5rem. Justify and align-content to the center; while setting align-items to stretch.</li>
+                <li>Give the flex-items an overall padding of 1rem, but a padding-bottom of 1.5rem.</li>
+                <li>The left div's flex items needs a flex-basis of 47% set on it.</li>
+                <li>The right div's flex items needs a flex-basis of 25%. Also give it a width of 50%.</li>
+                <li>In the left div, set the order of the first flex item to 2.</li>
+                <li>In the right div, set the order of the last flex item to -2.</li>
+                <li>Create a media query for under 965 pixels. Under 965 pixels, the flex items in this section should change to a different background colour. Also, set flex-basis and width for all flex items to &lsquo;auto&rsquo;.</li>
+                <li>Last, create a second media query for under 650 pixels. Under 650 pixels, the background colour of all flex items should change again. Also, remove the flex-wrap on the right div under this screen width.</li>
+
+            </ol>
+        </p>
+        <br>
+
+    </div>
+
+    <a href="#s1"><button id="s1btn">s1</button></a>
+    <a href="#s2"><button id="s2btn">s2</button></a>
+    <a href="#s3"><button id="s3btn">s3</button></a>
+    <a href="#s4"><button id="s4btn">s4</button></a>    
+
+</body>    

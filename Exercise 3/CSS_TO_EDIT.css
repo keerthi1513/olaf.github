@@ -1,0 +1,96 @@
+
+/* DIV.LEFT and DIV.RIGHT (THE FLEX CONTAINERS) */
+/* ----------------------------------------------------- */
+
+div.left, 
+div.right {
+    background-color: white;
+    width: 100%;
+    width: 50%;
+}
+
+
+
+/* General Styling */
+.left, .right {
+    display: flex;
+}
+.right {
+    flex-direction: column;
+}
+.left div, .right div {
+    text-align: center;
+    margin: 2px;
+    padding: 5px;
+}
+
+/* Section 1 (#s1) */
+#s1 .left div:nth-child(4),
+#s1 .right div:nth-child(4) {
+    font-size: 2.2rem;
+}
+#s1 .left div:nth-child(5),
+#s1 .right div:nth-child(5) {
+    font-size: 1.5rem;
+}
+#s1 .left div, #s1 .right div {
+    flex-grow: 1;
+}
+
+/* Section 2 (#s2) */
+#s2 .left, #s2 .right {
+    flex-wrap: wrap;
+}
+#s2 .left div, #s2 .right div {
+    flex-basis: 90px;
+}
+
+/* Section 3 (#s3) */
+#s3 .left div:first-child, 
+#s3 .right div:first-child {
+    flex-basis: 50%;
+}
+
+/* Section 4 (#s4) */
+#s4 .left, #s4 .right {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    align-content: center;
+    align-items: stretch;
+}
+#s4 .left div, #s4 .right div {
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+}
+#s4 .left div {
+    flex-basis: 47%;
+}
+#s4 .right div {
+    flex-basis: 25%;
+    width: 50%;
+}
+#s4 .left div:first-child {
+    order: 2;
+}
+#s4 .right div:last-child {
+    order: -2;
+}
+
+/* Media Queries */
+@media (max-width: 965px) {
+    #s4 .left div, #s4 .right div {
+        background-color: lightblue;
+        flex-basis: auto;
+        width: auto;
+    }
+}
+
+@media (max-width: 650px) {
+    #s4 .left div, #s4 .right div {
+        background-color: lightcoral;
+    }
+    #s4 .right {
+        flex-wrap: nowrap;
+    }
+}
