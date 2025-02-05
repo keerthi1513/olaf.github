@@ -9,46 +9,58 @@
     transition: all 0.3s ease-in-out;
 }
 
-/* Background Styling with animated gradient */
+/* Background Styling with Image & Animated Gradient */
 body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(45deg, #1d1d1d, #3a3a3a);
+    background: url('bg-image.jpg') center/cover no-repeat, linear-gradient(45deg, #1d1d1d, #3a3a3a);
     animation: gradientBG 10s infinite alternate;
+    position: relative;
 }
 
-@keyframes gradientBG {
-    0% { background: #1d1d1d; }
-    100% { background: #3a3a3a; }
+/* Dark Overlay for Readability */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 0;
 }
 
 /* Glassmorphism Card */
 .container {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
     border-radius: 20px;
     padding: 40px;
     text-align: center;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.3);
     max-width: 450px;
     width: 90%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    z-index: 1;
 }
 
 /* Typography */
 h1 {
-    font-size: 30px;
+    font-size: 32px;
     font-weight: 600;
     color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 h2 {
     font-size: 18px;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 15px;
 }
 
@@ -57,7 +69,7 @@ hr {
     margin: 20px 0;
 }
 
-/* Button Styling */
+/* Button Styling (Keeping it as requested) */
 ul {
     list-style: none;
     padding: 0;
