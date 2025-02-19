@@ -1,0 +1,37 @@
+DOM STRUCTURE FOR D10.E1:
+-------------------------
+
+BODY 
+|
+|------	SECTION
+|	|
+|	|------	ASIDE ...
+|	|
+|	|------ ARTICLE
+|	|	|
+|	|	|------	DIV.LEFT
+|	|	|	|------	H3 (position: absolute)
+|	|	|	|------ DIV (Item 1)
+|	|	|	|------ DIV (Item 2)
+|	|	|	------- DIV (Item 3)
+|	|	|	...
+|	|	|	
+|	|	|	
+|	|	-------	DIV.RIGHT
+|	|		|------	H3 (position: absolute)
+|	|		|------ DIV (Item 1)
+|	|		|------ DIV (Item 2)
+|	|		------- DIV (Item 3)
+|	|		...	
+|	|
+|	------- ASIDE ...
+|
+|
+|------	SECTION
+|	|
+|	|------	ASIDE ...
+|	|------	ARTICLE ...
+|	------- ASIDE ...
+|
+|
+/BODY
