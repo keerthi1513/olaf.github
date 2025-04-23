@@ -1,0 +1,300 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #0a0d17;
+    color: white;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    padding: 40px 0;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #25d3b9, #3a95eb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration-color: transparent;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #f0f0f0;
+}
+
+/* Futures selection styles */
+.futures-selection {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    gap: 20px;
+}
+
+.future-card {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.future-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.future-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.future-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.future-card:hover .future-image img {
+    transform: scale(1.05);
+}
+
+.icon-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon {
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.burned-icon {
+    background-color: rgba(255, 100, 100, 0.8);
+}
+
+.healed-icon {
+    background-color: rgba(100, 255, 150, 0.8);
+}
+
+.future-card h2 {
+    padding: 20px 20px 10px;
+    font-size: 1.5rem;
+}
+
+.future-card p {
+    padding: 0 20px 20px;
+    color: #cccccc;
+}
+
+/* Scenario view styles */
+.scenario-view {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.back-button {
+    cursor: pointer;
+    color: #999;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.back-button:hover {
+    color: #fff;
+}
+
+.time-selector {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.time-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    width: 100px;
+}
+
+.time-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* New Time Button Themes */
+.time-button.healed {
+    background-color: rgba(185, 63, 26, 0.3);
+    border: 2px solid #d33f25;
+    color: #b63313;
+}
+
+.time-button.healed:hover {
+    background-color: rgba(100, 255, 150, 0.5);
+}
+
+.time-button.burned {
+    background-color: rgba(255, 100, 100, 0.3);
+    border: 2px solid #ff5555;
+    color: #ff5555;
+}
+
+.time-button.burned:hover {
+    background-color: rgba(255, 100, 100, 0.5);
+}
+
+.time-button.active {
+    background-color: #25d3b9;
+    color: #0a0d17;
+}
+
+.time-icon {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.time-label {
+    font-size: 0.9rem;
+}
+
+.scene-container {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.scene-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.scene-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.voiceover-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.voiceover-button {
+    background-color: #ff5555;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s;
+}
+
+.voiceover-button:hover {
+    background-color: #ff7777;
+}
+
+.voiceover-button.green {
+    background-color: #25d3b9;
+}
+
+.voiceover-button.green:hover {
+    background-color: #3de0c6;
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 30px;
+}
+
+.language-icon {
+    font-size: 1.2rem;
+}
+
+select {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+select option {
+    background-color: #0a0d17;
+}
+
+.voiceover-text {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    font-style: italic;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .futures-selection {
+        flex-direction: column;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .time-selector {
+        flex-wrap: wrap;
+    }
+}

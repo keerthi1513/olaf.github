@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELFy - System for Emotional & Life Feedback</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="gold-shimmer"></div>
+        <div class="circuit-pulses"></div>
+    </div>
+    
+    <div class="container">
+        <!-- Screen 1: Welcome Interface -->
+        <section id="welcome-screen" class="screen active">
+            <div class="robot-container">
+                <div class="robot">
+                    <div class="robot-head">
+                        <div class="eye"></div>
+                    </div>
+                    <div class="robot-body"></div>
+                </div>
+            </div>
+            <h1>SELFy</h1>
+            <h2>Your Mirror, Your Shadow</h2>
+            <p class="tagline">Reflect. Reveal. Repeat.</p>
+            <div class="welcome-text">
+                <p id="welcome-message">Hello, I'm SELFy, your daily self-optimization guide. Let's begin understanding you.</p>
+                <p id="welcome-secondary" class="subtle-text">Don't worry, this will only take... your whole day. 😌</p>
+            </div>
+            <button id="begin-button" class="glow-button">Begin Daily Session</button>
+        </section>
+
+        <!-- Screen 2: Identity Setup -->
+        <section id="setup-screen" class="screen">
+            <h2>Identity Setup</h2>
+            <div class="form-group">
+                <label>Choose Identity:</label>
+                <div class="option-buttons">
+                    <button class="option-btn" data-identity="male">Male</button>
+                    <button class="option-btn" data-identity="female">Female</button>
+                    <button class="option-btn" data-identity="neutral">Prefer not to say</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Choose Intention for Today:</label>
+                <div class="option-buttons">
+                    <button class="intention-btn" data-intention="selfcare">Self-care Mode</button>
+                    <button class="intention-btn" data-intention="energy">Energy Booster</button>
+                    <button class="intention-btn" data-intention="chill">Chill & Reflect</button>
+                </div>
+            </div>
+            <div id="intention-response" class="selfy-response"></div>
+            <button id="setup-next" class="nav-button" disabled>Continue</button>
+        </section>
+
+        <!-- Screen 3: Daily Check-In -->
+        <section id="checkin-screen" class="screen">
+            <h2>Daily Check-In</h2>
+            <div class="form-group">
+                <label>Mood:</label>
+                <div class="mood-options">
+                    <button class="mood-btn" data-mood="happy">😄</button>
+                    <button class="mood-btn" data-mood="neutral">😐</button>
+                    <button class="mood-btn" data-mood="sad">😔</button>
+                    <button class="mood-btn" data-mood="angry">😠</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Meals:</label>
+                <div class="meal-tracking">
+                    <div class="meal">
+                        <span>Breakfast</span>
+                        <div class="meal-options">
+                            <button class="meal-btn" data-meal="breakfast" data-status="had">Had</button>
+                            <button class="meal-btn" data-meal="breakfast" data-status="skipped">Skipped</button>
+                        </div>
+                    </div>
+                    <div class="meal">
+                        <span>Lunch</span>
+                        <div class="meal-options">
+                            <button class="meal-btn" data-meal="lunch" data-status="had">Had</button>
+                            <button class="meal-btn" data-meal="lunch" data-status="skipped">Skipped</button>
+                        </div>
+                    </div>
+                    <div class="meal">
+                        <span>Dinner</span>
+                        <div class="meal-options">
+                            <button class="meal-btn" data-meal="dinner" data-status="had">Had</button>
+                            <button class="meal-btn" data-meal="dinner" data-status="skipped">Skipped</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Energy Level: <span id="energy-value">50</span></label>
+                <input type="range" id="energy-slider" min="0" max="100" value="50">
+            </div>
+            <div class="form-group">
+                <label>One word to describe your day:</label>
+                <input type="text" id="day-word" maxlength="20" placeholder="Type one word...">
+            </div>
+            <div id="word-response" class="selfy-response"></div>
+            <button id="checkin-next" class="nav-button" disabled>Continue</button>
+        </section>
+
+        <!-- Screen 4: Behavioral Audit -->
+        <section id="audit-screen" class="screen">
+            <h2 class="glitch-text">Behavioral Audit</h2>
+            <div class="form-group glitch-container">
+                <label class="glitch-label">What did you avoid today?</label>
+                <textarea id="avoid-input" placeholder="Be honest..."></textarea>
+            </div>
+            <div class="form-group glitch-container">
+                <label class="glitch-label">What would you do if no one was watching?</label>
+                <textarea id="secret-input" placeholder="Tell me..."></textarea>
+            </div>
+            <div id="audit-response" class="selfy-response glitch-text"></div>
+            <button id="audit-next" class="nav-button glitch-button">Continue</button>
+        </section>
+
+        <!-- Screen 5: Feedback Generation -->
+        <section id="feedback-screen" class="screen">
+            <h2>Your Analysis</h2>
+            <div class="feedback-container">
+                <div class="feedback-card">
+                    <h3>Mood Score</h3>
+                    <div class="progress-container">
+                        <div id="mood-progress" class="progress-bar"></div>
+                        <span id="mood-score">0%</span>
+                    </div>
+                </div>
+                <div class="feedback-card">
+                    <h3>Meal Consistency</h3>
+                    <div class="progress-container">
+                        <div id="meal-progress" class="progress-bar"></div>
+                        <span id="meal-score">0%</span>
+                    </div>
+                </div>
+                <div class="feedback-card glitch-container">
+                    <h3 class="glitch-text">Self-Trust Index</h3>
+                    <div class="progress-container">
+                        <div id="trust-progress" class="progress-bar"></div>
+                        <span id="trust-score" class="glitch-text">0%</span>
+                    </div>
+                </div>
+            </div>
+            <button id="feedback-next" class="nav-button">Continue</button>
+        </section>
+
+        <!-- Screen 6: Thought Sharing -->
+        <section id="thought-screen" class="screen">
+            <h2>Share Your Thoughts</h2>
+            <div class="form-group">
+                <textarea id="thought-input" placeholder="Write a thought / reflection / memory..."></textarea>
+                <button id="post-thought" class="glow-button">Post to MindCloud</button>
+            </div>
+            <div id="thought-response" class="selfy-response"></div>
+            <div class="motivational-thought">
+                <p>"Even broken circuits can spark something new."</p>
+            </div>
+            <button id="thought-next" class="nav-button">Continue</button>
+        </section>
+
+        <!-- Screen 7: Final Loop -->
+        <section id="final-screen" class="screen">
+            <h2 class="flicker-text">Session Complete</h2>
+            <p class="flicker-text">You've been seen. Your day has been logged. Tomorrow awaits more data.</p>
+            <div class="final-buttons">
+                <button id="restart-button" class="glow-button">Restart Session</button>
+                <button id="view-dashboard" class="glow-button">View Dashboard</button>
+                <button id="exit-button" class="disabled-button">Exit Interface</button>
+            </div>
+            <p class="whisper-text">Don't be a stranger...</p>
+        </section>
+        
+        <!-- Screen 8: Dashboard -->
+        <section id="dashboard-screen" class="screen">
+            <h2>SELFy Dashboard</h2>
+            
+            <div class="dashboard-container">
+                <!-- Stats Overview Section -->
+                <div class="dashboard-section stats-overview">
+                    <h3>Your Overview</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-title">Mood Average</div>
+                            <div id="dashboard-mood-value" class="stat-value">--</div>
+                            <div id="dashboard-mood-trend" class="stat-trend neutral">--</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-title">Energy Level</div>
+                            <div id="dashboard-energy-value" class="stat-value">--</div>
+                            <div id="dashboard-energy-trend" class="stat-trend neutral">--</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-title">Meal Score</div>
+                            <div id="dashboard-meal-value" class="stat-value">--</div>
+                            <div id="dashboard-meal-trend" class="stat-trend neutral">--</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-title">Self-Trust</div>
+                            <div id="dashboard-trust-value" class="stat-value">--</div>
+                            <div id="dashboard-trust-trend" class="stat-trend neutral">--</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Charts Section -->
+                <div class="dashboard-section charts-section">
+                    <div class="chart-container mood-chart">
+                        <h3>Mood Tracking</h3>
+                        <div class="chart-placeholder" id="mood-chart">
+                            <div class="chart-bars" id="mood-chart-bars">
+                                <!-- Dynamic bars will be inserted by JavaScript -->
+                            </div>
+                            <div class="chart-labels" id="mood-chart-labels">
+                                <!-- Dynamic labels will be inserted by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container energy-chart">
+                        <h3>Energy Levels</h3>
+                        <div class="chart-placeholder" id="energy-chart">
+                            <div class="line-chart">
+                                <svg viewBox="0 0 300 150" class="line-chart-svg" id="energy-chart-svg">
+                                    <!-- Dynamic polyline will be inserted by JavaScript -->
+                                </svg>
+                            </div>
+                            <div class="chart-labels" id="energy-chart-labels">
+                                <!-- Dynamic labels will be inserted by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dashboard lower sections -->
+                <div class="dashboard-lower-sections">
+                    <!-- Recent Thoughts Section -->
+                    <div class="dashboard-section thoughts-section">
+                        <div class="thoughts-header">
+                            <div class="thoughts-title">Your Thoughts</div>
+                            <select class="thoughts-filter" id="thoughts-filter">
+                                <option value="recent">Most Recent</option>
+                                <option value="all">All Thoughts</option>
+                            </select>
+                        </div>
+                        <div class="thoughts-container" id="thoughts-container">
+                            <!-- Dynamic thought cards will be inserted by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Insights Section -->
+                    <div class="dashboard-section insights-section">
+                        <h3>SELFy Insights</h3>
+                        <div id="insights-container">
+                            <!-- Dynamic insight cards will be inserted by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="dashboard-actions">
+                    <button id="export-data" class="glow-button">Export Data</button>
+                    <button id="reset-dashboard" class="nav-button">Reset Stats</button>
+                    <button id="dashboard-back" class="nav-button">Return to Main</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Audio elements -->
+    <audio id="ambient-sound" loop>
+        <source src="https://freesound.org/data/previews/348/348991_6436863-lq.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="click-sound">
+        <source src="https://freesound.org/data/previews/534/534846_5312265-lq.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

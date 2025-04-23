@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Day in 2050: The Future We Created</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>A Day in 2050: The Future We Created</h1>
+            <p class="subtitle">The year is 2050. The world you wake up in depends on the choices made decades ago.</p>
+        </header>
+
+        <div class="futures-selection" id="futuresSelection">
+            <div class="future-card" id="futureCardBurned">
+                <div class="future-image">
+                    <img src="https://images.unsplash.com/photo-1552799446-159ba9523315?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Polluted sky">
+                    <div class="icon-overlay">
+                        <div class="icon burned-icon">⚠️</div>
+                    </div>
+                </div>
+                <h2>The World That Burned</h2>
+                <p>A future where inaction led to devastation</p>
+            </div>
+            
+            <div class="future-card" id="futureCardHealed">
+                <div class="future-image">
+                    <img src="https://c.pxhere.com/photos/6d/8a/sunrise_wind_generator_turbin_bluecanyonwindfarm-308784.jpg!d">
+                    <div class="icon-overlay">
+                        <div class="icon healed-icon">🌱</div>
+                    </div>
+                </div>
+                <h2>The World That Healed</h2>
+                <p>A future where sustainability saved the planet</p>
+            </div>
+        </div>
+
+        <div class="scenario-view" id="scenarioView">
+            <div class="back-button" id="backButton">← Choose Different Future</div>
+            
+            <div class="time-selector">
+                <div class="time-button" data-time="morning">
+                    <div class="time-icon">🌅</div>
+                    <div class="time-label">7:00 AM</div>
+                </div>
+                <div class="time-button" data-time="noon">
+                    <div class="time-icon">☀️</div>
+                    <div class="time-label">12:00 PM</div>
+                </div>
+                <div class="time-button" data-time="evening">
+                    <div class="time-icon">🌇</div>
+                    <div class="time-label">7:00 PM</div>
+                </div>
+            </div>
+            
+            <div class="scene-container">
+                <img id="sceneImage" src="" alt="Future scene">
+                <div class="scene-caption" id="sceneCaption"></div>
+            </div>
+            
+            <div class="voiceover-section">
+                <button class="voiceover-button" id="voiceoverButton">
+                    <span class="voiceover-icon">🔊</span>
+                    Play Voiceover
+                </button>
+                
+                <div class="language-selector">
+                    <div class="language-icon">🌐</div>
+                    <select id="languageSelect">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="voiceover-text" id="voiceoverText"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
